@@ -7,9 +7,9 @@ public class Users
     [BsonRepresentation(BsonType.ObjectId)]
     public int Id { get; set; }
 
-    [BsonElement("Name")]
+    [BsonElement("name")]
     public string Name { get; set; }
 
-    [BsonElement("Email")]
+    [BsonElement("email")]
     public string Email { get; set; }
 }
