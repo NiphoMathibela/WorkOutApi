@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "S48wipm/mec=",
+  "success": true,
+  "projectFilePath": "/Users/nipho/Documents/Software Dev Projects/WorkOutApi/ApplicationInterface/ApplicationInterface.csproj",
+  "expectedPackageFiles": [
+    "/Users/nipho/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "/Users/nipho/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
