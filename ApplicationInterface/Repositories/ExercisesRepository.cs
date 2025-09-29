@@ -1,6 +1,6 @@
 using MongoDB.Driver;
 
-public class ExercisesRepository
+public class ExercisesRepository : IExercisesRepository
 {
     private readonly IMongoCollection<Exercises> _exercisesCollection;
 

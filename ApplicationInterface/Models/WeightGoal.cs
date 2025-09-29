@@ -5,7 +5,7 @@ public class WeightGoal
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public int Id { get; set; }
+    public string Id { get; set; }
 
     [BsonElement("userId")]
     public string UserId { get; set; }
