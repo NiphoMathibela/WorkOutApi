@@ -7,18 +7,18 @@ public class Workouts
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [BsonElement("userId")]
-    public string UserId { get; set; }
+    public string UserId { get; set; } = null!;
 
     [BsonElement("name")]
-    public string Name { get; set; }
+    public string Name { get; set; } = null!;   
 
     [BsonElement("createdAt")]
     public DateTime CreatedAt { get; set; }
 
     [BsonElement("exercises")]
-    public List<Exercises> Exercises { get; set; }
+    public List<Exercises>? Exercises { get; set; }
 
 }

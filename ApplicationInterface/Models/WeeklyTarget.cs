@@ -7,17 +7,17 @@ public class WeeklyTarget
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [BsonElement("userId")]
-    public string UserId { get; set; }
+    public string UserId { get; set; } = null!;
 
     [BsonElement("targetWorkoutsPerWeek")]
-    public int TargetWorkoutsPerWeek { get; set; }
+    public int? TargetWorkoutsPerWeek { get; set; }
+
 
     [BsonElement("completedWorkoutsThisWeek")]
-    public int CompletedWorkoutsThisWeek { get; set; }
-
+    public int? CompletedWorkoutsThisWeek { get; set; }
     [BsonElement("weekStartDate")]
     public DateTime WeekStartDate { get; set; }
 

@@ -1,6 +1,7 @@
 using MongoDB.Driver;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Options;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,15 @@ builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("Mo
 
 // Register Mongo client as singleton
 var mongoConn = builder.Configuration.GetValue<string>("MongoDbSettings:ConnectionString");
+
+// 3. Register IMongoDatabase as a Singleton (The FIX)
+builder.Services.AddSingleton<IMongoDatabase>(sp =>
+{
+    // ... logic to retrieve client and settings
+    var client = sp.GetRequiredService<IMongoClient>();
+    var settings = sp.GetRequiredService<IOptions<MongoDBSettings>>().Value;
+    return client.GetDatabase(settings.DatabaseName);
+});
 
 builder.Services.AddSingleton<IMongoClient>(sp => new MongoClient(mongoConn));
 

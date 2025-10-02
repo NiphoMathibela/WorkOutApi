@@ -5,10 +5,10 @@ public class WeightGoal
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [BsonElement("userId")]
-    public string UserId { get; set; }
+    public string UserId { get; set; } = null!;
 
     [BsonElement("targetWeight")]
     public float TargetWeight { get; set; }

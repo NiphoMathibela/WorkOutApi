@@ -8,32 +8,33 @@ public class Exercises
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public string Id { get; set; } = null!;
 
     [BsonElement("name")]
-    public string Name { get; set; }
+    public string Name { get; set; } = null!;
 
     [BsonElement("description")]
-    public string Description { get; set; }
+    public string Description { get; set; } = null!;
+
 
     [BsonElement("muscleGroup")]
-    public string MuscleGroup { get; set; }
+    public string MuscleGroup { get; set; } = null!;
 
     [BsonElement("equipment")]
-    public string Equipment { get; set; }
+    public string Equipment { get; set; } = null!;
 
     [BsonElement("type")]                               
-    public string Type { get; set; }
+    public string Type { get; set; } = null!;
     
     [BsonElement("instructions")]
-    public string Instructions { get; set; }
+    public string Instructions { get; set; } = null!;
 
     [BsonElement("gifUrl")]
-    public string GifUrl { get; set; }
+    public string GifUrl { get; set; } = null!;
 
     [BsonElement("secondaryMuscleGroup")]
-    public string SecondaryMuscleGroup { get; set; }
+    public string SecondaryMuscleGroup { get; set; } = null!;
 
     [BsonElement("bodyPart")]
-    public string BodyPart { get; set; }
+    public string BodyPart { get; set; } = null!;
 }
