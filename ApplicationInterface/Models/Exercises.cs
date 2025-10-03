@@ -16,7 +16,6 @@ public class Exercises
     [BsonElement("description")]
     public string Description { get; set; } = null!;
 
-
     [BsonElement("muscleGroup")]
     public string MuscleGroup { get; set; } = null!;
 
