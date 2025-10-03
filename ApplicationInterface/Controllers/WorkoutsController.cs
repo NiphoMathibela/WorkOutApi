@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
-[Route("api/controller")]
+[Route("api/[controller]")]
 public class WorkoutController : ControllerBase
 {
     private readonly IWorkouts _repo;
