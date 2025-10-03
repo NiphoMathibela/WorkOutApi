@@ -21,7 +21,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize] // require JWT to create
+    // [Authorize] // require JWT to create
     public async Task<ActionResult> Create(Workouts p)
     {
         await _repo.CreateWorkoutAsync(p);
