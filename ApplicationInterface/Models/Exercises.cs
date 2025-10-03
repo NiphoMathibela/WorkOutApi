@@ -10,6 +10,12 @@ public class Exercises
     [BsonRepresentation(BsonType.ObjectId)]
     public string Id { get; set; } = null!;
 
+    [BsonElement("userId")]
+    public string UserId { get; set; } = null!;
+
+    [BsonElement("workoutId")]
+    public string WorkoutId { get; set; } = null!;
+
     [BsonElement("name")]
     public string Name { get; set; } = null!;
 
@@ -22,9 +28,9 @@ public class Exercises
     [BsonElement("equipment")]
     public string Equipment { get; set; } = null!;
 
-    [BsonElement("type")]                               
+    [BsonElement("type")]
     public string Type { get; set; } = null!;
-    
+
     [BsonElement("instructions")]
     public string Instructions { get; set; } = null!;
 
@@ -36,4 +42,10 @@ public class Exercises
 
     [BsonElement("bodyPart")]
     public string BodyPart { get; set; } = null!;
+
+    [BsonElement("repetitions")]
+    public int? Repetitions { get; set; }
+
+    [BsonElement("weight")]
+    public float? Weight { get; set; }
 }

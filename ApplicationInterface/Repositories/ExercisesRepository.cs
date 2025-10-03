@@ -21,6 +21,11 @@ public class ExercisesRepository : IExercisesRepository
         return await _exercisesCollection.Find(exercise => exercise.Id == id).FirstOrDefaultAsync();
     }
 
+    public async Task<List<Exercises>> GetExercisesByWorkoutIdAsync(string workoutId, string userId)
+    {
+        return await _exercisesCollection.Find(exercise => exercise.WorkoutId == workoutId && exercise.UserId == userId).ToListAsync();
+    }
+
     public async Task CreateExerciseAsync(Exercises exercise)
     {
         await _exercisesCollection.InsertOneAsync(exercise);

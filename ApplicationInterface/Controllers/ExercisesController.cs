@@ -20,6 +20,13 @@ public class ExercisesController : ControllerBase
         return exercise is null ? NotFound() : Ok(exercise);
     }
 
+    [HttpGet("workout/{workoutId}/user/{userId}")]
+    public async Task<ActionResult<List<Exercises>>> GetExercisesByWorkoutIdAsync(string workoutId, string userId)
+    {
+        var exercises = await _repo.GetExercisesByWorkoutIdAsync(workoutId, userId);
+        return exercises is null ? NotFound() : Ok(exercises);
+    }
+
     [HttpPost]
     // [Authorize] // require JWT to create
     public async Task<ActionResult> Create(Exercises p)
@@ -32,6 +39,9 @@ public class ExercisesController : ControllerBase
     [Authorize]
     public async Task<IActionResult> Update(string id, Exercises exercise)
     {
+        var existingExercise = await _repo.GetExerciseByIdAsync(id);
+        if (existingExercise is null) return NotFound();
+        exercise.Id = existingExercise.Id; // Ensure the ID from the URL is used, not from the body
         await _repo.UpdateExerciseAsync(id, exercise);
         return NoContent();
     }
