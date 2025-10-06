@@ -43,6 +43,9 @@ public class Exercises
     [BsonElement("bodyPart")]
     public string BodyPart { get; set; } = null!;
 
+    [BsonElement("sets")]
+    public int? Sets { get; set; }
+
     [BsonElement("repetitions")]
     public int? Repetitions { get; set; }
 
