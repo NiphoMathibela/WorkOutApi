@@ -20,28 +20,28 @@ public class Exercises
     public string Name { get; set; } = null!;
 
     [BsonElement("description")]
-    public string Description { get; set; } = null!;
+    public string? Description { get; set; }
 
     [BsonElement("muscleGroup")]
-    public string MuscleGroup { get; set; } = null!;
+    public string? MuscleGroup { get; set; }
 
     [BsonElement("equipment")]
-    public string Equipment { get; set; } = null!;
+    public string? Equipment { get; set; }
 
     [BsonElement("type")]
-    public string Type { get; set; } = null!;
+    public string? Type { get; set; }
 
     [BsonElement("instructions")]
-    public string Instructions { get; set; } = null!;
+    public string? Instructions { get; set; }
 
     [BsonElement("gifUrl")]
-    public string GifUrl { get; set; } = null!;
+    public string? GifUrl { get; set; }
 
     [BsonElement("secondaryMuscleGroup")]
-    public string SecondaryMuscleGroup { get; set; } = null!;
+    public string? SecondaryMuscleGroup { get; set; }
 
     [BsonElement("bodyPart")]
-    public string BodyPart { get; set; } = null!;
+    public string? BodyPart { get; set; }
 
     [BsonElement("sets")]
     public int? Sets { get; set; }
