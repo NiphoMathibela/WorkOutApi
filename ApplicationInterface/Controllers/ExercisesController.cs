@@ -36,7 +36,7 @@ public class ExercisesController : ControllerBase
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> Update(string id, Exercises exercise)
     {
         var existingExercise = await _repo.GetExerciseByIdAsync(id);
@@ -47,7 +47,7 @@ public class ExercisesController : ControllerBase
     }
 
     [HttpDelete("{id:length(24)}")]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> Delete(string id)
     {
         var exercise = await _repo.GetExerciseByIdAsync(id);

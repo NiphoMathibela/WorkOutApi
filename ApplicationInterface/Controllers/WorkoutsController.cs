@@ -29,7 +29,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> Update(string id, Workouts updated)
     {
         var workout = await _repo.GetWorkoutByIdAsync(id);
@@ -40,7 +40,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete("{id:length(24)}")]
-    [Authorize]
+    // [Authorize]
     public async Task<IActionResult> Delete(string id)
     {
         var workout = await _repo.GetWorkoutByIdAsync(id);
