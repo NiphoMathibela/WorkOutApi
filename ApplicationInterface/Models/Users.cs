@@ -15,4 +15,16 @@ public class Users
 
     [BsonElement("password")]
     public string Password { get; set; } = null!;
+
+    [BsonElement("age")]
+    public int? Age { get; set; }
+
+    [BsonElement("weeklyGoal")]
+    public int? WeeklyGoal { get; set; }
+
+    [BsonElement("goalWeight")]
+    public float? GoalWeight { get; set; }
+
+    [BsonElement("currentWeight")]
+    public float? CurrentWeight { get; set; }    
 }

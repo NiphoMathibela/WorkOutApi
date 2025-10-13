@@ -13,7 +13,7 @@ public class WeightGoal
     [BsonElement("targetWeight")]
     public float TargetWeight { get; set; }
 
-    [BsonElement("currentWeight")] 
+    [BsonElement("currentWeight")]
     public float CurrentWeight { get; set; }
 
     [BsonElement("targetDate")]
